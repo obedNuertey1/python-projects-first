@@ -23,3 +23,10 @@ def next_day_in_week(num, current_day):
     return comma_and_space + next_day.title() + comment
 
 def get_new_time(start, duration):
+    [time_string, am_or_pm] = start.split(' ')
+    [start_time_hour, start_time_min] = list(map(int, time_string.split(':')))
+    [duration_hour, duration_min] = list(map(int, duration.split(':')))
+
+    # Convert start time to 24-hour format
+    if am_or_pm == 'PM':
+        start_time_hour += 12
