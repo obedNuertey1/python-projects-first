@@ -24,3 +24,6 @@ class Category:
 
     def get_balance(self):
         return sum(item['amount'] for item in self.ledger)
+
+    def transfer(self, amount, budget_category):
+        if self.check_funds(amount):
