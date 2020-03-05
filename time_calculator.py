@@ -43,3 +43,11 @@ def get_new_time(start, duration):
         display_hour = 12
     
     # Determine AM/PM
+    new_am_or_pm = 'AM' if new_hour < 12 else 'PM'
+
+    # Calculate the number of days passed
+    days = total_hours // 24
+
+    return {
+        'hour_on_clock': display_hour,
+        'new_minutes_str': f'{new_minutes:02d}',  # Ensures 2-digit format
