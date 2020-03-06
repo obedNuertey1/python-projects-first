@@ -38,3 +38,9 @@ class Category:
 
 def create_spend_chart(categories):
     total_spent = 0
+    category_spent = []
+
+    # Calculate spending per category
+    for category in categories:
+        spent = sum(-item['amount'] for item in category.ledger if item['amount'] < 0)
+        category_spent.append((category.name, spent))
