@@ -24,3 +24,10 @@ class Rectangle:
         diagonal = ((self.width ** 2 + self.height ** 2) ** 0.5)
         return diagonal
     
+    def get_picture(self):
+        if self.width > 50 or (self.height > 50):
+            return 'Too big for picture.'
+
+        line = ('*' * self.width) + '\n'
+        shape = ''
+        for i in range(0, self.height):
