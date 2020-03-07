@@ -57,3 +57,13 @@ def create_spend_chart(categories):
             chart += " o " if percent >= i else "   "
         chart += " \n"
 
+    # Add horizontal line
+    chart += "    " + "-" * (len(categories) * 3 + 1) + "\n"
+
+    # Add category names
+    max_name_length = max(len(name) for name, _ in percentages)
+    category_names = [name.ljust(max_name_length) for name, _ in percentages]
+    for i in range(max_name_length):
+        chart += "     "  # Padding
+        for name in category_names:
+            chart += f"{name[i]}  "
