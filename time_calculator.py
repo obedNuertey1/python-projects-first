@@ -59,3 +59,11 @@ def add_time(start, duration, day=""):
     time_dict = get_new_time(start, duration)
     day_in_week = next_day_in_week(time_dict['days'], day)
 
+    return f'{time_dict["hour_on_clock"]}:{time_dict["new_minutes_str"]} {time_dict["new_am_or_pm"]}{day_in_week}'
+
+# Examples:
+print(add_time('3:00 PM', '3:10'))  # 6:10 PM
+print(add_time('11:30 AM', '2:32', 'Monday'))  # 2:02 PM, Monday
+print(add_time('10:10 PM', '3:30'))  # 1:40 AM (next day)
+print(add_time('11:43 PM', '24:20', 'tueSday'))  # 12:03 AM, Thursday (2 days later)
+print(add_time('6:30 PM', '205:12'))  # 7:42 AM (9 days later)
