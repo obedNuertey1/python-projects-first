@@ -30,3 +30,6 @@ def get_new_time(start, duration):
     # Convert start time to 24-hour format
     if am_or_pm == 'PM':
         start_time_hour += 12
+    
+    # Calculate new total minutes and hours
+    total_minutes = start_time_min + duration_min
