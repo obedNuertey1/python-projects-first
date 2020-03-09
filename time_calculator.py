@@ -16,3 +16,5 @@ def next_day_in_week(num, current_day):
         comma_and_space = ', '
 
     index_of_current_day = days_of_the_week.index(current_day.lower())
+    raw_newday_number = num + index_of_current_day
+    newday_index = raw_newday_number % len(days_of_the_week) 
