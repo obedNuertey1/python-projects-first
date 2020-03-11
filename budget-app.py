@@ -83,3 +83,8 @@ food.transfer(50, clothing)
 clothing.withdraw(25.55, 'new shoes')
 clothing.withdraw(100, 'jacket')
 entertainment = Category('Entertainment')
+entertainment.deposit(1000, 'initial deposit')
+entertainment.withdraw(150, 'concert tickets')
+
+print(food)
+print(create_spend_chart([food, clothing, entertainment]))
