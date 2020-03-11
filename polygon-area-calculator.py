@@ -39,3 +39,7 @@ class Rectangle:
             return NotImplemented
         
         return self.get_area() // shape.get_area()
+      
+
+
+class Square(Rectangle):
