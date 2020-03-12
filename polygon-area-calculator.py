@@ -31,3 +31,11 @@ class Rectangle:
         line = ('*' * self.width) + '\n'
         shape = ''
         for i in range(0, self.height):
+            shape += line
+        return shape
+    
+    def get_amount_inside(self, shape):
+        if isinstance(shape, Rectangle) != isinstance(self, Rectangle):
+            return NotImplemented
+        
+        return self.get_area() // shape.get_area()
