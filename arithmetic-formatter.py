@@ -18,3 +18,13 @@ def arithmetic_arranger(problems, display_answers=False):
         operand1, operator, operand2 = parts
 
         # Check if the operator is valid
+        if operator not in ['+', '-']:
+            return "Error: Operator must be '+' or '-'."
+
+        # Check if operands contain only digits
+        if not operand1.isdigit() or not operand2.isdigit():
+            return "Error: Numbers must only contain digits."
+
+        # Check if operands have more than four digits
+        if len(operand1) > 4 or len(operand2) > 4:
+            return "Error: Numbers cannot be more than four digits."
