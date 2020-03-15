@@ -16,3 +16,9 @@ class Rectangle:
         area = self.height * self.width
         return area
     
+    def get_perimeter(self):
+        perimeter = 2 * self.width + 2 * self.height
+        return perimeter
+    
+    def get_diagonal(self):
+        diagonal = ((self.width ** 2 + self.height ** 2) ** 0.5)
