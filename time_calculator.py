@@ -18,3 +18,8 @@ def next_day_in_week(num, current_day):
     index_of_current_day = days_of_the_week.index(current_day.lower())
     raw_newday_number = num + index_of_current_day
     newday_index = raw_newday_number % len(days_of_the_week) 
+    next_day = days_of_the_week[newday_index]
+
+    return comma_and_space + next_day.title() + comment
+
+def get_new_time(start, duration):
