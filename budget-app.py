@@ -29,3 +29,12 @@ class Category:
         if self.check_funds(amount):
             self.withdraw(amount, f"Transfer to {budget_category.name}")
             budget_category.deposit(amount, f"Transfer from {self.name}")
+            return True
+        return False
+
+    def check_funds(self, amount):
+        return self.get_balance() >= amount
+
+
+def create_spend_chart(categories):
+    total_spent = 0
