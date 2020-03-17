@@ -15,3 +15,6 @@ def arithmetic_arranger(problems, display_answers=False):
         if len(parts) != 3:
             return "Error: Invalid problem format."
 
+        operand1, operator, operand2 = parts
+
+        # Check if the operator is valid
