@@ -71,3 +71,7 @@ def create_spend_chart(categories):
             chart += "\n"
 
     return chart
+
+
+# Example usage
+food = Category('Food')
