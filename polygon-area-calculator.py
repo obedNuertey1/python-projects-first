@@ -43,3 +43,13 @@ class Rectangle:
 
 
 class Square(Rectangle):
+    def __init__(self, side):
+        super().__init__(side, side)
+        self.side = side
+    
+    def __str__(self):
+        return f'{self.__class__.__name__}(side={self.side})'
+    
+    def set_side(self, side):
+            self.side, self.height, self.width = [side]*3
+        
