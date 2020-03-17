@@ -34,3 +34,13 @@ def arithmetic_arranger(problems, display_answers=False):
 
         # Build the lines
         first_line.append(operand1.rjust(max_width))
+        second_line.append(operator + operand2.rjust(max_width - 1))
+        lines.append("-" * max_width)
+
+        # Calculate the answer if needed
+        if display_answers:
+            if operator == '+':
+                result = int(operand1) + int(operand2)
+            else:
+                result = int(operand1) - int(operand2)
+            answers.append(str(result).rjust(max_width))
