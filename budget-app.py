@@ -52,3 +52,8 @@ def create_spend_chart(categories):
     # Build the chart
     chart = "Percentage spent by category\n"
     for i in range(100, -1, -10):
+        chart += f"{i:>3}|"
+        for _, percent in percentages:
+            chart += " o " if percent >= i else "   "
+        chart += " \n"
+
