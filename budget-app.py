@@ -27,3 +27,5 @@ class Category:
 
     def transfer(self, amount, budget_category):
         if self.check_funds(amount):
+            self.withdraw(amount, f"Transfer to {budget_category.name}")
+            budget_category.deposit(amount, f"Transfer from {self.name}")
