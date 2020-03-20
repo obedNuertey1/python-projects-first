@@ -44,3 +44,8 @@ def arithmetic_arranger(problems, display_answers=False):
             else:
                 result = int(operand1) - int(operand2)
             answers.append(str(result).rjust(max_width))
+
+    # Combine the arranged output
+    arranged_problems = "    ".join(first_line) + "\n"
+    arranged_problems += "    ".join(second_line) + "\n"
+    arranged_problems += "    ".join(lines)
