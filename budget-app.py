@@ -12,3 +12,8 @@ class Category:
         total = self.get_balance()
         result += f"Total: {total:.2f}"
         return result
+
+    def deposit(self, amount, description=""):
+        self.ledger.append({'amount': amount, 'description': description})
+
+    def withdraw(self, amount, description=""):
