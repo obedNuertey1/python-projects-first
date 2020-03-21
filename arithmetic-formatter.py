@@ -28,3 +28,9 @@ def arithmetic_arranger(problems, display_answers=False):
         # Check if operands have more than four digits
         if len(operand1) > 4 or len(operand2) > 4:
             return "Error: Numbers cannot be more than four digits."
+
+        # Determine the width of the problem
+        max_width = max(len(operand1), len(operand2)) + 2
+
+        # Build the lines
+        first_line.append(operand1.rjust(max_width))
