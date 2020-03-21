@@ -54,3 +54,11 @@ class Hat:
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     def _is_subset(drawn, expected):
+        for color, count in expected.items():
+            if drawn.get(color, 0) < count:
+                return False
+        return True
+
+    success_count = 0
+
+    for _ in range(num_experiments):
