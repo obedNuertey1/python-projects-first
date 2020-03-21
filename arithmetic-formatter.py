@@ -8,3 +8,4 @@ def arithmetic_arranger(problems, display_answers=False):
     second_line = []
     lines = []
     answers = []
+
