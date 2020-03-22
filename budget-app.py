@@ -67,3 +67,4 @@ def create_spend_chart(categories):
         chart += "     "  # Padding
         for name in category_names:
             chart += f"{name[i]}  "
+        if i < max_name_length - 1:
