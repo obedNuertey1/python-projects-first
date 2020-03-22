@@ -22,3 +22,10 @@ class Hat:
     
     def __str__(self):
         # Custom string representation for debugging or printing the Hat object.
+        self.__get_new_entries()  # Ensure entries are up to date.
+        entries = tuple(f'{val}={key}' for val, key in self.entries.items())  # Format entries as strings.
+        return f'{self.__class__.__name__}{str(entries)}'
+
+    def __repr__(self):
+        # Representation method for debugging purposes.
+        self.__get_new_entries()  # Ensure entries are up to date.
