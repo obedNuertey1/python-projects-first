@@ -36,3 +36,13 @@ class Hat:
         # Draw `n_balls` randomly from the hat.
         if n_balls > len(self.contents):
             # If requested number exceeds available balls, return all balls.
+            drawn = copy.deepcopy(self.contents)
+            self.contents = []
+            return drawn
+        
+        balls_drawn = []  # List to store drawn balls.
+        contents = copy.deepcopy(self.contents)  # Deep copy to prevent modifying original list.
+        
+        for i in range(n_balls):
+            rand_index = random.randint(0, len(contents) - 1)  # Get a random index.
+            balls_drawn.append(contents[rand_index])  # Add the ball at the random index to the result.
