@@ -69,3 +69,8 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
         for ball in drawn_balls:
             drawn_dict[ball] = drawn_dict.get(ball, 0) + 1
 
+        if _is_subset(drawn_dict, expected_balls):
+            success_count += 1
+
+    return success_count / num_experiments
+
