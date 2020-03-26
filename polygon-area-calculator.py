@@ -13,3 +13,4 @@ class Rectangle:
         self.height = height
     
     def get_area(self):
+        area = self.height * self.width
