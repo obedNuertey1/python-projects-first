@@ -22,3 +22,5 @@ class Rectangle:
     
     def get_diagonal(self):
         diagonal = ((self.width ** 2 + self.height ** 2) ** 0.5)
+        return diagonal
+    
