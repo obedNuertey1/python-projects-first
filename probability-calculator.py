@@ -31,3 +31,8 @@ class Hat:
         self.__get_new_entries()  # Ensure entries are up to date.
         entries = tuple(f'{val}={key}' for val, key in self.entries.items())  # Format entries as strings.
         return f'{self.__class__.__name__}{str(entries)}'
+    
+    def draw(self, n_balls):
+        # Draw `n_balls` randomly from the hat.
+        if n_balls > len(self.contents):
+            # If requested number exceeds available balls, return all balls.
