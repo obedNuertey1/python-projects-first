@@ -46,3 +46,11 @@ class Hat:
         for i in range(n_balls):
             rand_index = random.randint(0, len(contents) - 1)  # Get a random index.
             balls_drawn.append(contents[rand_index])  # Add the ball at the random index to the result.
+            contents.pop(rand_index)  # Remove the ball from the contents list.
+        
+        self.contents = contents  # Update the original contents after drawing.
+
+        return balls_drawn
+
+def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
+    def _is_subset(drawn, expected):
