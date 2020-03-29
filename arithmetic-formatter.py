@@ -5,3 +5,6 @@ def arithmetic_arranger(problems, display_answers=False):
 
     # Containers for the arranged output
     first_line = []
+    second_line = []
+    lines = []
+    answers = []
