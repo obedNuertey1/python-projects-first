@@ -6,3 +6,8 @@ class Rectangle:
     def __str__(self):
         return f'{self.__class__.__name__}(width={self.width}, height={self.height})'
     
+    def set_width(self, width):
+        self.width = width
+    
+    def set_height(self, height):
+        self.height = height
