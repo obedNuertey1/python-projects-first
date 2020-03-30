@@ -75,3 +75,5 @@ def create_spend_chart(categories):
 
 # Example usage
 food = Category('Food')
+food.deposit(1000, 'deposit')
+food.withdraw(10.15, 'groceries')
