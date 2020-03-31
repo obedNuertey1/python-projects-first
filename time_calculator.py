@@ -33,3 +33,13 @@ def get_new_time(start, duration):
     
     # Calculate new total minutes and hours
     total_minutes = start_time_min + duration_min
+    total_hours = start_time_hour + duration_hour + (total_minutes // 60)
+    new_minutes = total_minutes % 60
+    
+    # Calculate the new hour in 12-hour format
+    new_hour = total_hours % 24
+    display_hour = new_hour % 12
+    if display_hour == 0:
+        display_hour = 12
+    
+    # Determine AM/PM
