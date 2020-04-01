@@ -51,3 +51,11 @@ def get_new_time(start, duration):
     return {
         'hour_on_clock': display_hour,
         'new_minutes_str': f'{new_minutes:02d}',  # Ensures 2-digit format
+        'new_am_or_pm': new_am_or_pm,
+        'days': days
+    }
+
+def add_time(start, duration, day=""):
+    time_dict = get_new_time(start, duration)
+    day_in_week = next_day_in_week(time_dict['days'], day)
+
