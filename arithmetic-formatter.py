@@ -9,3 +9,9 @@ def arithmetic_arranger(problems, display_answers=False):
     lines = []
     answers = []
 
+    # Loop through each problem
+    for problem in problems:
+        parts = problem.split()
+        if len(parts) != 3:
+            return "Error: Invalid problem format."
+
